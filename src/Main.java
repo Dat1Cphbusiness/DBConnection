@@ -1,9 +1,11 @@
 
+import processing.core.PApplet;
+
 import java.util.ArrayList;
-public class Main {
+public class Main extends PApplet {
     public static void main(String[] args) {
         //Todo: tilføj stien til din .db fil
-        var url = "jdbc:sqlite:monopoly.db";
+        var url = "jdbc:sqlite:game";
         DBConnector dbConnector = new DBConnector();
 
 
@@ -13,6 +15,12 @@ public class Main {
         ArrayList<String> data = dbConnector.selectPlayers();
 
         printData(data);
+
+        data = dbConnector.selectFields();
+
+        printData(data);
+
+        dbConnector.registerOwner(16, 2);
     }
 
     private static void printData(ArrayList<String> data) {
@@ -21,4 +29,7 @@ public class Main {
             System.out.println(s);
         }
     }
+
+
+
 }

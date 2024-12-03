@@ -1,4 +1,7 @@
 INSERT INTO Fields (field_type, label, income) VALUES ('Start','Start',4000);
+
+
+
 INSERT INTO Fields (field_type, label, cost, income, seriesID) VALUES ('Plot', 'Rødovrevej', 1200, 100, 1);
 INSERT INTO Fields (field_type, label) VALUES ('Chance', 'Prøv Lykken');
 INSERT INTO Fields (field_type, label, cost, income, seriesID) VALUES ('Plot', 'Hvidovrevej', 1200, 100, 1);
